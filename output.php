@@ -4,7 +4,6 @@ $response = file_get_contents('https://7a859ffcc3961df6e1c52d6dc93cf672:shppa_1b
 $response = json_decode(($response), JSON_PRETTY_PRINT);
 
 $a = 1;
-echo "<ul>";
 foreach($response["products"] as $item) { 
     $title = $item['title'];
     echo "<tr>";
@@ -13,7 +12,4 @@ foreach($response["products"] as $item) {
     echo "</tr>";
     $a++;
 }
-echo "</ul>"
-
-
 ?>
